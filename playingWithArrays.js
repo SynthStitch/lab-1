@@ -14,3 +14,7 @@ console.log(`Oh and also a${McDonaldsOrder[0]}.`);
 // remove the last element of the array
 McDonaldsOrder.pop();
 console.log(`Actually, I don't want the${McDonaldsOrder[McDonaldsOrder.length - 1]} anymore.`);
+
+// remove the first element of the array
+McDonaldsOrder.shift();
+console.log(`I changed my mind, I don't want the${McDonaldsOrder[0]} either.`);
