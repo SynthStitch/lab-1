@@ -61,11 +61,11 @@ animate(); // Start the animation loop
 
 // always gotta render the scene
 renderer.render(scene, camera);
-
+// Handle window resizing
 window.addEventListener('resize', () => {
   const w = window.innerWidth;
   const h = window.innerHeight;
-  renderer.setSize(w, h);
-  camera.aspect = w / h;
-  camera.updateProjectionMatrix();
+  renderer.setSize(w, h); // Update the renderer size
+  camera.aspect = w / h; // Update the camera aspect ratio
+  camera.updateProjectionMatrix(); // Update the camera projection matrix
 });
