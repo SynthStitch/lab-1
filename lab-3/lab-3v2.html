@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 1 Exercise 3</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        min-height: 100vh;
+        align-items: stretch;
+      }
+      .column {
+        background: rgb(32, 196, 218);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        transition: background-color 0.5s ease;
+      }
+      .column img {
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+        margin-top: 20px;
+        border-radius: 10px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: crosshair;
+        border: 2px solid black;
+        background-color: white;
+        margin-top: 20px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="column" id="column1">
+        <h1 id="heading1">Hello</h1>
+        <img
+          src="https://i.pinimg.com/736x/fb/b4/ba/fbb4ba1fb41e32366caa9a88ca945558.jpg"
+          alt="Placeholder Image 1"
+        />
+        <button onclick="changeColumn1()">Change Me</button>
+      </div>
+      <div class="column" id="column2">
+        <h1 id="heading2">World</h1>
+        <img
+          src="https://i.pinimg.com/736x/fb/61/55/fb6155f496c190ba979bc3c49c6adbdc.jpg"
+          alt="Placeholder Image 2"
+        />
+        <button onclick="changeColumn2()">Change Me</button>
+      </div>
+    </div>
+    <script>
+      function changeColumn1() {
+        document.getElementById("column1").style.backgroundColor = "lightcoral";
+        document.getElementById("heading1").innerText = "Red!";
+      }
+
+      function changeColumn2() {
+        document.getElementById("column2").style.backgroundColor =
+          "lightyellow";
+        document.getElementById("heading2").innerText = "Blue!";
+      }
+    </script>
+  </body>
+</html>
